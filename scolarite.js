@@ -9,4 +9,11 @@ const etudiants = [
     },
 ];
 
-console.log(etudiants);
+const cours = ["Georgraphie", "Mathematique", "Français"]
+// console.log(etudiants);
+
+
+// module.exports = etudiants; //export du tableau etudiants afin de le rendre accéssible partout où le fichier est appelé
+module.exports = {      //export de deux tableaux
+    etudiants, cours
+};
