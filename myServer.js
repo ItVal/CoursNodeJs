@@ -2,7 +2,7 @@ const http = require("http"); //creation d'un serveur
 const fs = require("fs"); //variable du fichier
 
 const serveur = http.createServer((requete, reponse) => {
-  console.log("serveur créer");
+  console.log("serveur is ready, requête effectuée avec succès ");
   // // recuperons maintenant les reponses au format texte brut et affichons les sur le navigateur suivant les demandes des utilisateurs
   // reponse.setHeader('content-type', 'text/plain') ; //definition de l'entête qui va renvoyer une reponse au format texte brut
 
@@ -53,7 +53,7 @@ const serveur = http.createServer((requete, reponse) => {
   //Lecture du fichier HTML et envoie de la réponse côté client
   fs.readFile(fichier, (erreur, data) => {
     if (erreur) {
-      console.log(erreur);
+      console.log(erreur); 
       reponse.end();
     } else {
       reponse.write(data);
